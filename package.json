@@ -1,0 +1,64 @@
+{
+  "name": "steal-cirdep",
+  "version": "0.0.0",
+  "description": "An attempt to isolate the steal circular dep issue",
+  "homepage": "",
+  "author": {
+    "name": "Bradley Momberger",
+    "email": "brad@bitovi.com",
+    "url": "https://bitovi.com/"
+  },
+  "scripts": {
+    "test": "testee src/test.html --browsers firefox --reporter Spec",
+    "start": "done-serve --port 8080",
+    "develop": "done-serve --develop --port 8080",
+    "document": "documentjs",
+    "build": "node build"
+  },
+  "main": "steal-cirdep/index.stache!done-autorender",
+  "files": [
+    "src"
+  ],
+  "keywords": [],
+  "steal": {
+    "main": "steal-cirdep/index.stache!done-autorender",
+    "directories": {
+      "lib": "src"
+    },
+    "configDependencies": [
+      "live-reload",
+      "node_modules/can-zone/register"
+    ],
+    "plugins": [
+      "steal-stache",
+      "steal-less"
+    ]
+  },
+  "license": "MIT/X11",
+  "dependencies": {
+    "can-component": "^3.0.5",
+    "can-connect": "^1.3.3",
+    "can-map": "^3.0.4",
+    "can-map-define": "^3.0.4",
+    "can-route": "^3.0.6",
+    "can-route-pushstate": "^3.0.2",
+    "can-zone": "^0.6.4",
+    "done-autorender": "^1.0.0-alpha.0",
+    "done-component": "^0.6.0-pre.0",
+    "done-css": "^3.0.0-alpha.4",
+    "done-serve": "^1.0.0-alpha.0",
+    "generator-donejs": "^0.9.0",
+    "steal": "^1.2.0",
+    "steal-less": "^1.1.0",
+    "steal-stache": "^3.0.5"
+  },
+  "devDependencies": {
+    "can-fixture": "^0.1.2",
+    "documentjs": "^0.4.2",
+    "donejs-cli": "^1.0.0-alpha.0",
+    "funcunit": "~3.0.0",
+    "steal-qunit": "^1.0.0",
+    "steal-tools": "^1.0.0",
+    "testee": "^0.2.4"
+  }
+}

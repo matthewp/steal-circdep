@@ -1,0 +1,4 @@
+<p>This is the primary component.</p>
+<p>{{sharedFunc}}</p>
+
+<secondary-component />
